@@ -28,7 +28,7 @@ app.use('/test-jwt', testJWTRouter); // REMOVE FOR TEST ONLY
 app.use('/users', usersRouter);
 
 //posts
-app.use('/posts', hootsRouter);
+app.use('/posts', postsRouter);
 
 
 // Protected Routes
