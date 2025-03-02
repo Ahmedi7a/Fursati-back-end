@@ -15,8 +15,8 @@ router.use(verifyToken);
  router.post('/', async (req, res) => {
     try {
       req.body.author = req.user._id;
-      const hoot = await Post.create(req.body);
-      hoot._doc.author = req.user;
+      const post = await Post.create(req.body);
+      post._doc.author = req.user;
       res.status(201).json(post);
     } catch (error) {
       console.log(error);
@@ -27,18 +27,14 @@ router.use(verifyToken);
 
 router.get('/', async (req, res) => {
     try {
-      const hoots = await Post.find({})
+      const post = await Post.find({})
         .populate('author')
         .sort({ createdAt: 'desc' });
-      res.status(200).json(posts);
+      res.status(200).json(post);
     } catch (error) {
       res.status(500).json(error);
     }
   });
-
-
- 
-
 
 //show details
 router.get('/:postId', async (req, res) => {
@@ -114,10 +110,6 @@ router.post('/:postId/comments', async (req, res) => {
         res.status(500).json(error);
     }
 });
-
-
-
-
 
 
 module.exports = router;
