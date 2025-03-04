@@ -112,6 +112,17 @@ router.post('/:postId/comments', async (req, res) => {
 });
 
 
+router.delete('/:postId/comments/:commentId', async (req, res) => {
+    try {
+      const post = await Post.findById(req.params.postId);
+      post.comments.remove({ _id: req.params.commentId });
+      await post.save();
+      res.status(200).json({ message: 'Ok' });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 module.exports = router;
 
 

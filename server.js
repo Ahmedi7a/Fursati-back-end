@@ -17,7 +17,7 @@ const profilesRouter = require('./controllers/profiles');
 const postsRouter = require('./controllers/posts.js');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(morgan('dev'));
