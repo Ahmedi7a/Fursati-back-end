@@ -1,113 +1,46 @@
-# Express API - JWT Auth Back-End - Setup
+# Forsati: Empowering Job Seekers & Connecting Opportunities
 
-## Setup
+## Description
 
-Open your Terminal application and navigate to your projects codespace directory:
+Fursati is a web-based platform designed to help job seekers showcase their skills and experience while allowing recruiters and other users to interact with them. The platform enables job seekers to create a public job-seeking post, where they highlight their expertise, career goals, and contact details. Other users can comment, ask questions, or provide feedback, making it an interactive space for career opportunities and professional networking.
+## Planing and requirments:
+https://trello.com/b/lWZRs4yk/project-3-planning
 
-## Cloning the Auth boilerplate
+## Try The App:
+https://fursati-front-end.vercel.app/
 
-This lecture uses the [Express API JWT Auth Template](https://github.com/Dujota/express-api-jwt-auth-template.git) as starter code. The template includes code to authenticate users with JWT tokens.
+### Technologies Used:
 
-Navigate to the [Express API JWT Auth Template](https://github.com/Dujota/express-api-jwt-auth-template.git) and clone the repository to your machine:
+* Frontend: React.js, JavaScript, Bootstrap
+* Backend: Node.js, Express.js
+* Database: MongoDB
 
-```bash
-git clone https://github.com/Dujota/express-api-jwt-auth-template.git
-```
 
-Once we have the repository on our machines, we can change the name of the directory to `'express-api-hoot-back-end'`:
+#### Guest Home Page:
+![guest home page](https://github.com/user-attachments/assets/69866bef-2173-469c-981e-1e9a253d0cd5)
 
-```bash
-mv express-api-jwt-auth-template YOUR_APP_NAME
-```
+#### User Home Page:
+![user home page](https://github.com/user-attachments/assets/b5b584ee-827a-442f-9f5e-d23ffb3c9e82)
 
-Next, `cd` into your renamed directory:
+### All posts:
 
-```bash
-cd YOUR_APP_NAME
-```
 
-Finally, remove the existing `.git` information from this template:
+### Details of your post:
+![job seekers posts](https://github.com/user-attachments/assets/8d510866-c514-4126-9e6b-082bd19deb03)
+People can add comment to your post
 
-```bash
-rm -rf .git
-```
+### Add a post Form:
+![form](https://github.com/user-attachments/assets/12b5e7c7-fac3-4c6f-932c-e71c2da27fc4)
 
-> Removing the `.git` info is important as this is just a starter template provided by GA. You do not need the existing git history for this project.
+### Model:
+![model](https://github.com/user-attachments/assets/305aeb65-eb3b-4030-9847-41a14a3d8a08)
+Getting confirmation before doing any CRUD related
 
-## GitHub setup
+# Future Work
 
-To add this project to GitHub, initialize a new Git repository:
+* Real-time Notifications – Notify users about comments, likes, and updates on their saved places.
+* Dark Mode & UI Enhancements – Introduce dark mode and refine the user interface for a better experience.
+* Community Engagement Features – Enable users to follow others
 
-```bash
-git init
-git add .
-git commit -m "init commit"
-```
 
-Make a new repository on [GitHub](https://github.com/) named `YOUR_APP_NAME`.
 
-Link your local project to your remote GitHub repo:
-
-```bash
-git remote add origin https://github.com/<github-username>/YOUR_APP_NAME.git
-git push origin main
-```
-
-> 🚨 Do not copy the above command. It will not work. Your GitHub username will replace `<github-username>` (including the `<` and `>`) in the URL above. Also replace `YOUR_APP_NAME` with your project name
-
-Open the project's folder in your code editor:
-
-```bash
-code .
-```
-
-## Install dependencies
-
-Next, you will want to install all of the packages listed in `package.json`
-
-```bash
-npm i
-```
-
-## Create your .gitignore
-
-Run the following command in your terminal:
-
-```bash
-touch .gitignore
-```
-
-Once these files are created, add `.env` and `node_modules` to your `.gitignore` file. Doing so will prevent those files and directories from being tracked and we can be confident that any data we add there will not be pushed up to GitHub.
-
-```text
-.env
-node_modules
-```
-
-## Create your .env
-
-Run the following command in your terminal:
-
-```bash
-touch .env
-```
-
-Lastly, we want to add a `MONGODB_URI` and a `JWT_SECRET`.
-
-Add the following secret keys to your application:
-
-```text
-MONGODB_URI=mongodb+srv://<username>:<password>@sei-w0kys.azure.mongodb.net/hoot?retryWrites=true
-JWT_SECRET=supersecret
-SALT_ROUNDS=10
-```
-
-> If you are unsure of where to obtain your MongoDB URI, please refer to the MongoDB Atlas Setup Lab.
-
-Start the application with the following command:
-
-```bash
-npm run dev
-```
-
-Happy Coding!
