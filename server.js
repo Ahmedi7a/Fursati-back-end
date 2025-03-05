@@ -17,14 +17,14 @@ const profilesRouter = require('./controllers/profiles');
 const postsRouter = require('./controllers/posts.js');
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
 // Routes
-app.use('/test-jwt', testJWTRouter); // REMOVE FOR TEST ONLY
+app.use('/test-jwt', testJWTRouter); 
 app.use('/users', usersRouter);
 
 //posts

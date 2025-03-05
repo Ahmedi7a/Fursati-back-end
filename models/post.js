@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// models/hoot.js
 const commentSchema = new mongoose.Schema(
     {
         text: {
