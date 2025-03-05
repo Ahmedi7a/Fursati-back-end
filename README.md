@@ -1,4 +1,4 @@
-# Forsati: Empowering Job Seekers & Connecting Opportunities
+# Fursati: Empowering Job Seekers & Connecting Opportunities
 
 ## Description
 
